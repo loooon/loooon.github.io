@@ -4,12 +4,12 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://yizi.tech/"/>
   <updated>2017-02-28T06:38:03.377Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://yizi.tech/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Michael</name>
     
   </author>
   
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2017/02/28/hello-world/"/>
-    <id>http://yoursite.com/2017/02/28/hello-world/</id>
+    <link href="http://yizi.tech/2017/02/28/hello-world/"/>
+    <id>http://yizi.tech/2017/02/28/hello-world/</id>
     <published>2017-02-28T06:01:27.589Z</published>
     <updated>2017-02-28T06:38:03.377Z</updated>
     
@@ -39,10 +39,10 @@
     
     </summary>
     
-      <category term="tech" scheme="http://yoursite.com/categories/tech/"/>
+      <category term="tech" scheme="http://yizi.tech/categories/tech/"/>
     
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://yizi.tech/tags/hexo/"/>
     
   </entry>
   
