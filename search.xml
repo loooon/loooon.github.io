@@ -943,9 +943,9 @@
         
         <tags>
             
-            <tag> 吴语 </tag>
-            
             <tag> 上海话 </tag>
+            
+            <tag> 吴语 </tag>
             
         </tags>
         
@@ -1504,12 +1504,6 @@
   
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://yizi.tech/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>http://yizi.tech/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是Michael。欢迎来到我的个人技术博客。</p>
@@ -1517,6 +1511,12 @@
 
 <div style="background:url(http://of8ab6qqu.bkt.clouddn.com/resources/xiaoyuzhou.jpg);height:204px;"><br></div><br><div style="font-size: 30px;text-align: center;color: purple;"><br>访客脚印<br></div><br><div class="ds-recent-visitors" data-num-items="28" data-avatar-size="42" id="ds-recent-visitors" style="margin-bottom:60px;"></div>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yizi.tech/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
