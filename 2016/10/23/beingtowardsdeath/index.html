@@ -18,14 +18,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta property="og:title" content="向死而生"/>
-    <meta property="og:site_name" content="YI ZI"/>
+    <meta property="og:site_name" content="懿紫"/>
 
     
     <meta property="og:image" content="undefined"/>
     
 
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="alternate" href="/atom.xml" title="YI ZI" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="懿紫" type="application/atom+xml">
     <link rel="stylesheet" href="/css/lib/materialize.min.css">
     <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
@@ -46,7 +46,7 @@
             <i class="fa fa-navicon"></i>
         </a>
         <div class="">
-            <a href="/" class="brand-logo hide-on-med-and-down">YI ZI</a>
+            <a href="/" class="brand-logo hide-on-med-and-down">懿紫</a>
             <ul class="right hide-on-med-and-down">
                 
                     <li>
@@ -213,16 +213,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/music/">
-                    music <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/tech/">
+                    tech <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/tech/">
-                    tech <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/music/">
+                    music <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -457,8 +457,10 @@
 
     <div class="footer-copyright pink-link-context">
         <div class="container">
-            © 2017 yizi.tech, All rights reserved.
-            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+            © 2017 YIZI Inc., All rights reserved.
+            <p class="right" style="margin-top: 0;"><a href="http://baike.baidu.com/link?url=Mqb8kRWL3mSBw_Gd7mq1jSRPUQyBqcd0_vYWO7ZBgUrEgtPHzdzbc2sQGrlDaN1rydT6OvqpcEG2Ep09HFY0woX0OakrWiN06LJbf2T4pIWWaBKtzGvv25x8AYA3NSa1lWhal1lzIC2_DVPiwPEIc7nUwv1RR86gHRoVq1jsZjG21Rz6ej-8-KkvRLU42LIhss2aLm0eNayRIqXiecKxBPMtG80A12LOKzGJS-JFEKa">上海懿紫网络科技有限公司</a> ，版权所有©2017</p>
+
+
         </div>
     </div>
 </footer>
@@ -501,6 +503,21 @@
                     $table.addClass('responsive-table striped bordered');
                 }
             });
+
+            //优化打赏按钮
+            var donate_img_show_flag=true;
+            $("#donate_module").on('click',"#donate_board",function(){
+              $(this).show();
+              if(donate_img_show_flag){
+                $("#donate_guide").show();
+                donate_img_show_flag=false;
+
+              }else {
+                $("#donate_guide").hide();
+                donate_img_show_flag=true;
+              }
+            });
+
 
             // 首页幻灯片
             $('.slider').slider({indicators: true, full_width: true, interval: 8000});
