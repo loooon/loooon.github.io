@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/10/hello-world/</loc>
+    <lastmod>2017-02-28T08:51:09.495Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2016-10-10T07:42:19.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="tech" url="http://yizi.tech/categories/tech/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/20/lanshouxianggu/</loc>
+    <lastmod>2017-02-28T08:49:10.585Z</lastmod>
+    <data>
+        <display>
+        <title>蓝瘦香菇</title>
+        <pubTime>2016-10-20T08:01:41.000Z</pubTime>
+        
+        <tag>soul</tag>
+         
+         
+           
+             
+              <breadCrumb title="emotion" url="http://yizi.tech/categories/emotion/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/tipsoflearnenglish/</loc>
+    <lastmod>2016-12-16T09:16:10.041Z</lastmod>
+    <data>
+        <display>
+        <title>英语学习的20个好习惯</title>
+        <pubTime>2016-12-16T07:32:37.000Z</pubTime>
+        
+        <tag>english</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/philosophicalsayings/</loc>
+    <lastmod>2016-12-16T07:31:09.349Z</lastmod>
+    <data>
+        <display>
+        <title>人生哲理名言100句</title>
+        <pubTime>2016-12-16T07:30:17.000Z</pubTime>
+        
+        <tag>philosophical</tag>
+         
+         
+           
+             
+              <breadCrumb title="life" url="http://yizi.tech/categories/life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/topefficiency/</loc>
+    <lastmod>2016-12-16T07:28:09.045Z</lastmod>
+    <data>
+        <display>
+        <title>顶尖效率</title>
+        <pubTime>2016-12-16T07:00:09.000Z</pubTime>
+        
+        <tag>efficiency</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/learningattitude/</loc>
+    <lastmod>2016-12-16T07:09:45.670Z</lastmod>
+    <data>
+        <display>
+        <title>学习态度</title>
+        <pubTime>2016-12-16T06:43:15.000Z</pubTime>
+        
+        <tag>learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/howtolearn/</loc>
+    <lastmod>2016-12-16T06:56:39.184Z</lastmod>
+    <data>
+        <display>
+        <title>努力不成功？</title>
+        <pubTime>2016-12-16T06:48:15.000Z</pubTime>
+        
+        <tag>effort</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/giftedmemory/</loc>
+    <lastmod>2016-12-16T06:55:43.168Z</lastmod>
+    <data>
+        <display>
+        <title>过目不忘记忆力训练方法</title>
+        <pubTime>2016-12-16T06:51:47.000Z</pubTime>
+        
+        <tag>learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/memorytraining/</loc>
+    <lastmod>2016-12-16T06:50:20.831Z</lastmod>
+    <data>
+        <display>
+        <title>记忆能力的简单训练</title>
+        <pubTime>2016-12-16T06:49:48.000Z</pubTime>
+        
+        <tag>memory</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/16/learningplan/</loc>
+    <lastmod>2016-12-16T06:49:10.631Z</lastmod>
+    <data>
+        <display>
+        <title>学习计划</title>
+        <pubTime>2016-12-16T06:46:33.000Z</pubTime>
+        
+        <tag>learningplan</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/01/ideatips/</loc>
+    <lastmod>2016-12-01T08:22:46.655Z</lastmod>
+    <data>
+        <display>
+        <title>IDEA Tips</title>
+        <pubTime>2016-12-01T07:43:43.000Z</pubTime>
+        
+        <tag>IDEA</tag>
+         
+         
+           
+             
+              <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/12/01/wechatrecord/</loc>
+    <lastmod>2016-12-01T08:04:17.364Z</lastmod>
+    <data>
+        <display>
+        <title>Wechat Record</title>
+        <pubTime>2016-12-01T04:53:39.000Z</pubTime>
+        
+        <tag>chatting</tag>
+         
+         
+           
+             
+              <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/9999/11/11/kangbazi/</loc>
+    <lastmod>2016-11-29T09:50:22.475Z</lastmod>
+    <data>
+        <display>
+        <title>Kang Ba Zi</title>
+        <pubTime>9999-11-11T03:11:11.000Z</pubTime>
+        
+        <tag>李振东</tag>
+         
+        <tag>龙口组</tag>
+         
+        <tag>初一扛把子</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/11/01/schoollightning/</loc>
+    <lastmod>2016-11-21T02:09:28.165Z</lastmod>
+    <data>
+        <display>
+        <title>schoollightning</title>
+        <pubTime>2016-11-01T09:15:22.000Z</pubTime>
+        
+        <tag>math</tag>
+         
+        <tag>lightning</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/11/16/shanghaihua/</loc>
+    <lastmod>2016-11-17T10:26:35.582Z</lastmod>
+    <data>
+        <display>
+        <title>上海话学习宝典</title>
+        <pubTime>2016-11-16T02:40:12.000Z</pubTime>
+        
+        <tag>上海话</tag>
+         
+        <tag>吴语</tag>
+         
+         
+           
+             
+              <breadCrumb title="language" url="http://yizi.tech/categories/language/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/11/16/angular2/</loc>
+    <lastmod>2016-11-16T07:45:25.696Z</lastmod>
+    <data>
+        <display>
+        <title>Angular2</title>
+        <pubTime>2016-11-16T07:26:31.000Z</pubTime>
+        
+        <tag>angular2</tag>
+         
+         
+           
+             
+              <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/11/16/wuyu/</loc>
+    <lastmod>2016-11-16T03:15:37.393Z</lastmod>
+    <data>
+        <display>
+        <title>吴语学习宝典</title>
+        <pubTime>2016-11-16T02:41:57.000Z</pubTime>
+        
+        <tag>吴语</tag>
+         
+         
+           
+             
+              <breadCrumb title="language" url="http://yizi.tech/categories/language/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/11/15/regularexpression/</loc>
+    <lastmod>2016-11-16T02:39:06.908Z</lastmod>
+    <data>
+        <display>
+        <title>Regular Expression</title>
+        <pubTime>2016-11-15T02:12:28.000Z</pubTime>
+        
+        <tag>Reg</tag>
+         
+         
+           
+             
+              <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/21/markdown/</loc>
+    <lastmod>2016-11-10T06:21:36.796Z</lastmod>
+    <data>
+        <display>
+        <title>markdown</title>
+        <pubTime>2016-10-21T02:31:30.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>markdown</tag>
+         
+         
+           
+             
+              <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/11/07/gonewithwind/</loc>
+    <lastmod>2016-11-07T10:50:15.890Z</lastmod>
+    <data>
+        <display>
+        <title>Gone With The Wind</title>
+        <pubTime>2016-11-07T10:46:43.000Z</pubTime>
+        
+        <tag>love</tag>
+         
+         
+           
+             
+              <breadCrumb title="literary" url="http://yizi.tech/categories/literary/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/25/configureeclipse/</loc>
+    <lastmod>2016-10-25T10:40:27.916Z</lastmod>
+    <data>
+        <display>
+        <title>Configure memory of eclipse</title>
+        <pubTime>2016-10-25T10:19:31.000Z</pubTime>
+        
+        <tag>eclipse</tag>
+         
+         
+           
+             
+              <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/23/beingtowardsdeath/</loc>
+    <lastmod>2016-10-25T10:23:57.486Z</lastmod>
+    <data>
+        <display>
+        <title>向死而生</title>
+        <pubTime>2016-10-23T08:31:40.000Z</pubTime>
+        
+        <tag>xiangsiersheng</tag>
+         
+         
+           
+             
+              <breadCrumb title="literary" url="http://yizi.tech/categories/literary/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/19/myhexorecord/</loc>
+    <lastmod>2016-10-25T10:22:26.037Z</lastmod>
+    <data>
+        <display>
+        <title>My Hexo Blog</title>
+        <pubTime>2016-10-19T08:03:28.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/23/gemini/</loc>
+    <lastmod>2016-10-25T07:03:22.342Z</lastmod>
+    <data>
+        <display>
+        <title>Gemini</title>
+        <pubTime>2016-10-23T06:18:18.000Z</pubTime>
+        
+        <tag>gimini</tag>
+         
+         
+           
+             
+              <breadCrumb title="constellation" url="http://yizi.tech/categories/constellation/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/21/leeqing/</loc>
+    <lastmod>2016-10-24T10:14:29.200Z</lastmod>
+    <data>
+        <display>
+        <title>LeeQing</title>
+        <pubTime>2016-10-21T05:01:15.000Z</pubTime>
+        
+        <tag>lol</tag>
+         
+        <tag>leeqing</tag>
+         
+         
+           
+             
+              <breadCrumb title="game" url="http://yizi.tech/categories/game/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/24/proverbs/</loc>
+    <lastmod>2016-10-24T08:20:27.266Z</lastmod>
+    <data>
+        <display>
+        <title>箴言</title>
+        <pubTime>2016-10-23T16:04:14.000Z</pubTime>
+        
+        <tag>bible</tag>
+         
+         
+           
+             
+              <breadCrumb title="faith" url="http://yizi.tech/categories/faith/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/23/4396/</loc>
+    <lastmod>2016-10-24T01:42:15.321Z</lastmod>
+    <data>
+        <display>
+        <title>4396,do you know?</title>
+        <pubTime>2016-10-23T07:09:11.000Z</pubTime>
+        
+        <tag>lol</tag>
+         
+         
+           
+             
+              <breadCrumb title="game" url="http://yizi.tech/categories/game/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yizi.tech/2016/10/19/healtheworld/</loc>
+    <lastmod>2016-10-21T08:32:54.161Z</lastmod>
+    <data>
+        <display>
+        <title>Heal the world</title>
+        <pubTime>2016-10-19T07:42:19.000Z</pubTime>
+        
+        <tag>soul</tag>
+         
+         
+           
+             
+              <breadCrumb title="music" url="http://yizi.tech/categories/music/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
