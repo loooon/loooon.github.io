@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yizi.tech/about/index.html</loc>
+    
+    <lastmod>2017-03-01T01:11:53.978Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yizi.tech/2016/10/10/hello-world/</loc>
     
     <lastmod>2017-02-28T08:51:09.495Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>http://yizi.tech/2016/10/20/lanshouxianggu/</loc>
     
     <lastmod>2017-02-28T08:49:10.585Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yizi.tech/about/index.html</loc>
-    
-    <lastmod>2017-02-28T08:34:22.173Z</lastmod>
     
   </url>
   
