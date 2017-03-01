@@ -1504,12 +1504,6 @@
   
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://yizi.tech/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>http://yizi.tech/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是Michael。欢迎来到我的个人技术博客。</p>
@@ -1517,6 +1511,12 @@
 
 <div style="background:url(/xuewuzhijing.png);height:204px;"><br></div>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yizi.tech/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
