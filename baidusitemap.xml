@@ -5,6 +5,30 @@
     
     
   <url>
+    <loc>http://yizi.tech/1111/11/11/kangbazi/</loc>
+    <lastmod>2017-05-16T07:18:03.709Z</lastmod>
+    <data>
+        <display>
+        <title>Kang Ba Zi</title>
+        <pubTime>1111-11-11T03:11:11.000Z</pubTime>
+        
+        <tag>李振东</tag>
+         
+        <tag>龙口组</tag>
+         
+        <tag>初一扛把子</tag>
+         
+         
+           
+             
+              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yizi.tech/2016/10/10/hello-world/</loc>
     <lastmod>2017-02-28T08:51:09.495Z</lastmod>
     <data>
@@ -239,30 +263,6 @@
            
              
               <breadCrumb title="technology" url="http://yizi.tech/categories/technology/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yizi.tech/9999/11/11/kangbazi/</loc>
-    <lastmod>2016-11-29T09:50:22.475Z</lastmod>
-    <data>
-        <display>
-        <title>Kang Ba Zi</title>
-        <pubTime>9999-11-11T03:11:11.000Z</pubTime>
-        
-        <tag>李振东</tag>
-         
-        <tag>龙口组</tag>
-         
-        <tag>初一扛把子</tag>
-         
-         
-           
-             
-              <breadCrumb title="school" url="http://yizi.tech/categories/school/"/>
           
         </display>
     </data>
