@@ -1,0 +1,792 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="baidu-site-verification" content="aU3N2svBaJ" />
+    
+
+    <title>kotlin学习(1) | </title>
+    <meta name="author" content="Michael">
+    
+    <meta name="description" content="Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。JetBrains，作为目前广受欢迎的Java IDE IntelliJ 的提供商，在 Apache 许可下已经开源其Kotlin 编程语言。Kotlin已正式成为Android官方支持开发语言。
+基础语法
+1.定义包(package)12345package my.demoimport java.util.*// ...
+不需要匹配目录和包：源文件可以任意放置在文件系统中。">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="kotlin学习(1)"/>
+    <meta property="og:site_name" content="懿紫"/>
+
+    
+    <meta property="og:image" content="undefined"/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="懿紫" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fa48f8c382469a4c18f2c4a0b4ce9658";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">懿紫</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="http://ww2.sinaimg.cn/small/74990035jw1f1rjkd681bj20rs0rsdhg.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">Michael Chan</p>
+                        <p class="desc">Web前端/java/技术宅</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/game/">
+                    game <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/literary/">
+                    literary <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/technology/">
+                    technology <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/constellation/">
+                    constellation <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/school/">
+                    school <span class="right">9 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/music/">
+                    music <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/tech/">
+                    tech <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/emotion/">
+                    emotion <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/life/">
+                    life <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/faith/">
+                    faith <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/language/">
+                    language <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>kotlin学习(1)</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2017-06-27T05:56:09.000Z"><a href="/2017/06/27/kotlin学习-1/">2017-06-27</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/tech/" class="chip pink lighten-1">tech</a>
+        
+            <a href="/tags/kotlin/" class="chip pink lighten-1">kotlin</a>
+        
+            <a href="/tags/jvm/" class="chip pink lighten-1">jvm</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#1-定义包-package"><span class="section table-of-contents-text">1.定义包(package)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#2-定义函数-function"><span class="section table-of-contents-text">2.定义函数(function)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#3-定义局部变量"><span class="section table-of-contents-text">3.定义局部变量</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#4-注释"><span class="section table-of-contents-text">4.注释</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#5-使用字符串模板"><span class="section table-of-contents-text">5.使用字符串模板</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#6-使用条件表达式"><span class="section table-of-contents-text">6.使用条件表达式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#7-使用可空值及-null-检测"><span class="section table-of-contents-text">7.使用可空值及 null 检测</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#8-使用类型检测及自动类型转换"><span class="section table-of-contents-text">8.使用类型检测及自动类型转换</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#9-使用-for-循环"><span class="section table-of-contents-text">9.使用 for 循环</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#10-使用-while-循环"><span class="section table-of-contents-text">10.使用 while 循环</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#11-使用-when-表达式"><span class="section table-of-contents-text">11.使用 when 表达式</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#12-使用区间（range）"><span class="section table-of-contents-text">12.使用区间（range）</span></a></li><li class="section table-of-contents-item section table-of-contents-level-3"><a class="section table-of-contents-link" href="#13-使用集合"><span class="section table-of-contents-text">13.使用集合</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>Kotlin 是一个基于 JVM 的新的编程语言，由 JetBrains 开发。<br>Kotlin可以编译成Java字节码，也可以编译成JavaScript，方便在没有JVM的设备上运行。<br>JetBrains，作为目前广受欢迎的Java IDE IntelliJ 的提供商，在 Apache 许可下已经开源其Kotlin 编程语言。<br>Kotlin已正式成为Android官方支持开发语言。</p>
+<p>基础语法</p>
+<h3 id="1-定义包-package"><a href="#1-定义包-package" class="headerlink" title="1.定义包(package)"></a>1.定义包(package)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">package my.demo</div><div class="line"></div><div class="line">import java.util.*</div><div class="line"></div><div class="line">// ...</div></pre></td></tr></table></figure>
+<p>不需要匹配目录和包：源文件可以任意放置在文件系统中。<br><a id="more"></a></p>
+<h3 id="2-定义函数-function"><a href="#2-定义函数-function" class="headerlink" title="2.定义函数(function)"></a>2.定义函数(function)</h3><p>示例如下：</p>
+<blockquote>
+<p>2.1<br>带有两个 Int 参数、返回 Int 的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fun sum(a: Int, b: Int): Int &#123;</div><div class="line">    return a + b</div><div class="line">&#125;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    print(&quot;sum of 3 and 5 is &quot;)</div><div class="line">    println(sum(3, 5))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>运行结果：sum of 3 and 5 is 8</p>
+<blockquote>
+<p>2.2<br>将表达式作为函数体、返回值类型自动推断的函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fun sum(a: Int, b: Int) = a + b</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    println(&quot;sum of 19 and 23 is $&#123;sum(19, 23)&#125;&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>运行结果：sum of 19 and 23 is 42</p>
+<blockquote>
+<p>2.3<br>函数返回无意义的值：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fun printSum(a: Int, b: Int): Unit &#123;</div><div class="line">    println(&quot;sum of $a and $b is $&#123;a + b&#125;&quot;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    printSum(-1, 8)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>运行结果：sum of -1 and 8 is 7</p>
+<blockquote>
+<p>2.4<br>Unit 返回类型可以省略：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fun printSum(a: Int, b: Int) &#123;</div><div class="line">    println(&quot;sum of $a and $b is $&#123;a + b&#125;&quot;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    printSum(-1, 8)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>运行结果：sum of -1 and 8 is 7</p>
+<h3 id="3-定义局部变量"><a href="#3-定义局部变量" class="headerlink" title="3.定义局部变量"></a>3.定义局部变量</h3><blockquote>
+<p>3.1一次赋值（只读）的局部变量:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val a: Int = 1  // 立即赋值</div><div class="line">    val b = 2   // 自动推断出 `Int` 类型</div><div class="line">    val c: Int  // 如果没有初始值类型不能省略</div><div class="line">    c = 3       // 明确赋值</div><div class="line">    println(&quot;a = $a, b = $b, c = $c&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>运行结果：a = 1, b = 2, c = 3</p>
+<blockquote>
+<p>3.2可变变量：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    var x = 5 // 自动推断出 `Int` 类型</div><div class="line">    x += 1</div><div class="line">    println(&quot;x = $x&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p>运行结果：x = 6</p>
+<h3 id="4-注释"><a href="#4-注释" class="headerlink" title="4.注释"></a>4.注释</h3><p>正如 Java 和 JavaScript，Kotlin 支持行注释及块注释。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">// 这是一个行注释</div><div class="line"></div><div class="line">/* 这是一个多行的</div><div class="line">   块注释。 */</div></pre></td></tr></table></figure></p>
+<p>与 Java 不同的是，Kotlin 的块注释可以嵌套。<br>参见编写 Kotlin 代码文档 查看关于文档注释语法的信息。</p>
+<h3 id="5-使用字符串模板"><a href="#5-使用字符串模板" class="headerlink" title="5.使用字符串模板"></a>5.使用字符串模板</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    var a = 1</div><div class="line">    // 模板中的简单名称：</div><div class="line">    val s1 = &quot;a is $a&quot; </div><div class="line"></div><div class="line">    a = 2</div><div class="line">    // 模板中的任意表达式：</div><div class="line">    val s2 = &quot;$&#123;s1.replace(&quot;is&quot;, &quot;was&quot;)&#125;, but now is $a&quot;</div><div class="line">    println(s2)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：a was 1, but now is 2</p>
+<h3 id="6-使用条件表达式"><a href="#6-使用条件表达式" class="headerlink" title="6.使用条件表达式"></a>6.使用条件表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">fun maxOf(a: Int, b: Int): Int &#123;</div><div class="line">    if (a &gt; b) &#123;</div><div class="line">        return a</div><div class="line">    &#125; else &#123;</div><div class="line">        return b</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    println(&quot;max of 0 and 42 is $&#123;maxOf(0, 42)&#125;&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：max of 0 and 42 is 42<br>使用 if 作为表达式:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun maxOf(a: Int, b: Int) = if (a &gt; b) a else b</div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    println(&quot;max of 0 and 42 is $&#123;maxOf(0, 42)&#125;&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：max of 0 and 42 is 42</p>
+<h3 id="7-使用可空值及-null-检测"><a href="#7-使用可空值及-null-检测" class="headerlink" title="7.使用可空值及 null 检测"></a>7.使用可空值及 null 检测</h3><p>当某个变量的值可以为 null 的时候，必须在声明处的类型后添加 ? 来标识该引用可为空。<br>如果 str 的内容不是数字返回 null：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fun parseInt(str: String): Int? &#123;</div><div class="line">    // ……</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>使用返回可空值的函数:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">fun parseInt(str: String): Int? &#123;</div><div class="line">    return str.toIntOrNull()</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun printProduct(arg1: String, arg2: String) &#123;</div><div class="line">    val x = parseInt(arg1)</div><div class="line">    val y = parseInt(arg2)</div><div class="line"></div><div class="line">    // 直接使用 `x * y` 可能会报错，因为他们可能为 null</div><div class="line">    if (x != null &amp;&amp; y != null) &#123;</div><div class="line">        // 在空检测后，x 和 y 会自动转换为非空值（non-nullable）</div><div class="line">        println(x * y)</div><div class="line">    &#125;</div><div class="line">    else &#123;</div><div class="line">        println(&quot;either &apos;$arg1&apos; or &apos;$arg2&apos; is not a number&quot;)</div><div class="line">    &#125;    </div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    printProduct(&quot;6&quot;, &quot;7&quot;)</div><div class="line">    printProduct(&quot;a&quot;, &quot;7&quot;)</div><div class="line">    printProduct(&quot;a&quot;, &quot;b&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>42<br>either ‘a’ or ‘7’ is not a number<br>either ‘a’ or ‘b’ is not a number</p>
+<p>或者<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">fun parseInt(str: String): Int? &#123;</div><div class="line">    return str.toIntOrNull()</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun printProduct(arg1: String, arg2: String) &#123;</div><div class="line">    val x = parseInt(arg1)</div><div class="line">    val y = parseInt(arg2)</div><div class="line">    </div><div class="line">  </div><div class="line">    if (x == null) &#123;</div><div class="line">        println(&quot;Wrong number format in arg1: &apos;$&#123;arg1&#125;&apos;&quot;)</div><div class="line">        return</div><div class="line">    &#125;</div><div class="line">    if (y == null) &#123;</div><div class="line">        println(&quot;Wrong number format in arg2: &apos;$&#123;arg2&#125;&apos;&quot;)</div><div class="line">        return</div><div class="line">    &#125;</div><div class="line"></div><div class="line">  </div><div class="line">    println(x * y)</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    printProduct(&quot;6&quot;, &quot;7&quot;)</div><div class="line">    printProduct(&quot;a&quot;, &quot;7&quot;)</div><div class="line">    printProduct(&quot;99&quot;, &quot;b&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>42<br>Wrong number format in arg1: ‘a’<br>Wrong number format in arg2: ‘b’</p>
+<h3 id="8-使用类型检测及自动类型转换"><a href="#8-使用类型检测及自动类型转换" class="headerlink" title="8.使用类型检测及自动类型转换"></a>8.使用类型检测及自动类型转换</h3><p>is 运算符检测一个表达式是否某类型的一个实例。 如果一个不可变的局部变量或属性已经判断出为某类型，那么检测后的分支中可以直接当作该类型使用，无需显式转换：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">fun getStringLength(obj: Any): Int? &#123;</div><div class="line">    if (obj is String) &#123;</div><div class="line">        // `obj` 在该条件分支内自动转换成 `String`</div><div class="line">        return obj.length</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // 在离开类型检测分支后，`obj` 仍然是 `Any` 类型</div><div class="line">    return null</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    fun printLength(obj: Any) &#123;</div><div class="line">        println(&quot;&apos;$obj&apos; string length is $&#123;getStringLength(obj) ?: &quot;... err, not a string&quot;&#125; &quot;)</div><div class="line">    &#125;</div><div class="line">    printLength(&quot;Incomprehensibilities&quot;)</div><div class="line">    printLength(1000)</div><div class="line">    printLength(listOf(Any()))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>‘Incomprehensibilities’ string length is 21<br>‘1000’ string length is … err, not a string<br>‘[java.lang.Object@77459877]’ string length is … err, not a string </p>
+<p>或者：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">fun getStringLength(obj: Any): Int? &#123;</div><div class="line">    if (obj !is String) return null</div><div class="line"></div><div class="line">    // `obj` 在这一分支自动转换为 `String`</div><div class="line">    return obj.length</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    fun printLength(obj: Any) &#123;</div><div class="line">        println(&quot;&apos;$obj&apos; string length is $&#123;getStringLength(obj) ?: &quot;... err, not a string&quot;&#125; &quot;)</div><div class="line">    &#125;</div><div class="line">    printLength(&quot;Incomprehensibilities&quot;)</div><div class="line">    printLength(1000)</div><div class="line">    printLength(listOf(Any()))</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>‘Incomprehensibilities’ string length is 21<br>‘1000’ string length is … err, not a string<br>‘[java.lang.Object@77459877]’ string length is … err, not a string </p>
+<p>甚至：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">fun getStringLength(obj: Any): Int? &#123;</div><div class="line">    // `obj` 在 `&amp;&amp;` 右边自动转换成 `String` 类型</div><div class="line">    if (obj is String &amp;&amp; obj.length &gt; 0) &#123;</div><div class="line">        return obj.length</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return null</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    fun printLength(obj: Any) &#123;</div><div class="line">        println(&quot;&apos;$obj&apos; string length is $&#123;getStringLength(obj) ?: &quot;... err, is empty or not a string at all&quot;&#125; &quot;)</div><div class="line">    &#125;</div><div class="line">    printLength(&quot;Incomprehensibilities&quot;)</div><div class="line">    printLength(&quot;&quot;)</div><div class="line">    printLength(1000)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>‘Incomprehensibilities’ string length is 21<br>‘’ string length is … err, is empty or not a string at all<br>‘1000’ string length is … err, is empty or not a string at all </p>
+<h3 id="9-使用-for-循环"><a href="#9-使用-for-循环" class="headerlink" title="9.使用 for 循环"></a>9.使用 for 循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val items = listOf(&quot;apple&quot;, &quot;banana&quot;, &quot;kiwi&quot;)</div><div class="line">    for (item in items) &#123;</div><div class="line">        println(item)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">val items = listOf(&quot;apple&quot;, &quot;banana&quot;, &quot;kiwi&quot;)</div><div class="line">for (index in items.indices) &#123;</div><div class="line">    println(&quot;item at $index is $&#123;items[index]&#125;&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>item at 0 is apple<br>item at 1 is banana<br>item at 2 is kiwi</p>
+<h3 id="10-使用-while-循环"><a href="#10-使用-while-循环" class="headerlink" title="10.使用 while 循环"></a>10.使用 while 循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val items = listOf(&quot;apple&quot;, &quot;banana&quot;, &quot;kiwi&quot;)</div><div class="line">    var index = 0</div><div class="line">    while (index &lt; items.size) &#123;</div><div class="line">        println(&quot;item at $index is $&#123;items[index]&#125;&quot;)</div><div class="line">        index++</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：<br>item at 0 is apple<br>item at 1 is banana<br>item at 2 is kiwi</p>
+<h3 id="11-使用-when-表达式"><a href="#11-使用-when-表达式" class="headerlink" title="11.使用 when 表达式"></a>11.使用 when 表达式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">fun describe(obj: Any): String =</div><div class="line">when (obj) &#123;</div><div class="line">    1          -&gt; &quot;One&quot;</div><div class="line">    &quot;Hello&quot;    -&gt; &quot;Greeting&quot;</div><div class="line">    is Long    -&gt; &quot;Long&quot;</div><div class="line">    !is String -&gt; &quot;Not a string&quot;</div><div class="line">    else       -&gt; &quot;Unknown&quot;</div><div class="line">&#125;</div><div class="line"></div><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    println(describe(1))</div><div class="line">    println(describe(&quot;Hello&quot;))</div><div class="line">    println(describe(1000L))</div><div class="line">    println(describe(2))</div><div class="line">    println(describe(&quot;other&quot;))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：<br>One<br>Greeting<br>Long<br>Not a string<br>Unknown</p>
+<h3 id="12-使用区间（range）"><a href="#12-使用区间（range）" class="headerlink" title="12.使用区间（range）"></a>12.使用区间（range）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val x = 10</div><div class="line">    val y = 9</div><div class="line">    if (x in 1..y+1) &#123;</div><div class="line">        println(&quot;fits in range&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>运行结果：fits in range</p>
+<p>检测某个数字是否在指定区间外:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val list = listOf(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</div><div class="line"></div><div class="line">    if (-1 !in 0..list.lastIndex) &#123;</div><div class="line">        println(&quot;-1 is out of range&quot;)</div><div class="line">    &#125;</div><div class="line">    if (list.size !in list.indices) &#123;</div><div class="line">        println(&quot;list size is out of valid list indices range too&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>-1 is out of range<br>list size is out of valid list indices range too</p>
+<p>区间迭代:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    for (x in 1..5) &#123;</div><div class="line">        print(x)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：12345</p>
+<p>或数列迭代：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    for (x in 1..10 step 2) &#123;</div><div class="line">        print(x)</div><div class="line">    &#125;</div><div class="line">    for (x in 9 downTo 0 step 3) &#123;</div><div class="line">        print(x)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：135799630</p>
+<h3 id="13-使用集合"><a href="#13-使用集合" class="headerlink" title="13.使用集合"></a>13.使用集合</h3><p>对集合进行迭代:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val items = listOf(&quot;apple&quot;, &quot;banana&quot;, &quot;kiwi&quot;)</div><div class="line">    for (item in items) &#123;</div><div class="line">        println(item)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>apple<br>banana<br>kiwi</p>
+<p>使用 in 运算符来判断集合内是否包含某实例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val items = setOf(&quot;apple&quot;, &quot;banana&quot;, &quot;kiwi&quot;)</div><div class="line">    when &#123;</div><div class="line">        &quot;orange&quot; in items -&gt; println(&quot;juicy&quot;)</div><div class="line">        &quot;apple&quot; in items -&gt; println(&quot;apple is fine too&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：apple is fine too</p>
+<p>使用 lambda 表达式来过滤（filter）和映射（map）集合：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun main(args: Array&lt;String&gt;) &#123;</div><div class="line">    val fruits = listOf(&quot;banana&quot;, &quot;avocado&quot;, &quot;apple&quot;, &quot;kiwi&quot;)</div><div class="line">    fruits</div><div class="line">    .filter &#123; it.startsWith(&quot;a&quot;) &#125;</div><div class="line">    .sortedBy &#123; it &#125;</div><div class="line">    .map &#123; it.toUpperCase() &#125;</div><div class="line">    .forEach &#123; println(it) &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行结果：<br>APPLE<br>AVOCADO</p>
+
+                
+<p class="pink-link-context">
+    <a href="/2017/06/27/kotlin学习-2/" rel="next" title="kotlin学习(2)">
+    上一篇：kotlin学习(2)
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2017/05/16/java控制执行流程/" rel="next" title="java控制执行流程">
+    下一篇：java控制执行流程
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2017/06/27/kotlin学习-1/" data-title="kotlin学习(1)" data-url="http://yizi.tech/2017/06/27/kotlin学习-1/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'lonlone'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="social-group col m4 s12">
+                <h5 class="white-text">社交</h5>
+                
+                    <a class="social-link" href="http://weibo.com/1005052814061212" target="_blank">
+                        <i class="fa fa-2x fa-weibo"></i>
+                    </a>
+                
+                    <a class="social-link" href="https://github.com/loooon" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                    <a class="social-link" href="/atom.xml" target="_blank">
+                        <i class="fa fa-2x fa-rss"></i>
+                    </a>
+                
+                <div class="site-visitors-container white-text">
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+                    </span>
+                    <span>&nbsp;|&nbsp;</span>
+                    <span>
+                        <i class="fa fa-eye"></i>
+                        <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+                    </span>
+                </div>
+            </div>
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="http://kangbazi.top" target="_blank">KANG BA ZI</a>
+                
+                    <a class="social-link" href="https://doublekill.me" target="_blank">DOUBLE KILL</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2017 YIZI Inc., All rights reserved.
+            <p class="right" style="margin-top: 0;"><a target="_blank" href="http://baike.baidu.com/link?url=Mqb8kRWL3mSBw_Gd7mq1jSRPUQyBqcd0_vYWO7ZBgUrEgtPHzdzbc2sQGrlDaN1rydT6OvqpcEG2Ep09HFY0woX0OakrWiN06LJbf2T4pIWWaBKtzGvv25x8AYA3NSa1lWhal1lzIC2_DVPiwPEIc7nUwv1RR86gHRoVq1jsZjG21Rz6ej-8-KkvRLU42LIhss2aLm0eNayRIqXiecKxBPMtG80A12LOKzGJS-JFEKa">上海懿紫网络科技有限公司</a> ，版权所有©2017<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1261873560'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1261873560%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script></p>
+
+
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            //优化打赏按钮
+            var donate_img_show_flag=true;
+            $("#donate_module").on('click',"#donate_board",function(){
+              $(this).show();
+              if(donate_img_show_flag){
+                $("#donate_guide").show();
+                donate_img_show_flag=false;
+
+              }else {
+                $("#donate_guide").hide();
+                donate_img_show_flag=true;
+              }
+            });
+
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+            // 添加new标签
+            $('.menu-reading, .menu-about').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-85910415-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

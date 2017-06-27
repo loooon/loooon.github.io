@@ -7,13 +7,24 @@
     <meta name="baidu-site-verification" content="aU3N2svBaJ" />
     
 
-    <title>第 2 页 | </title>
+    <title>kotlin学习(2) | </title>
     <meta name="author" content="Michael">
+    
+    <meta name="description" content="习惯用法
+创建 DTOs（POJOs/POCOs）1data class Customer(val name: String, val email: String)
+会为 Customer 类提供以下功能：
+
+所有属性的 getters （对于 var 定义的还有 setters）
+equals()
+hashCode()
+toString()
+copy()
+所有属性的 component1()、 component2()……等等">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="kotlin学习(2)"/>
     <meta property="og:site_name" content="懿紫"/>
 
     
@@ -287,596 +298,145 @@ var _hmt = _hmt || [];
 
 
     <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+
         
 
-<div class="slider">
-    <ul class="slides">
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/1">
-               <div class="caption center-align">
-                 <h4>This is our big Tagline!</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/2">
-               <div class="caption left-align">
-                 <h4>Left Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-       <li>
-           <a href="javascript:;">
-               <img class="slider-image" src="http://lorempixel.com/580/250/nature/3">
-               <div class="caption right-align">
-                 <h4>Right Aligned Caption</h3>
-                 <h5 class="light grey-text text-lighten-3">Here&#39;s our small slogan.</h5>
-               </div>
-           </a>
-       </li>
-    
-   </ul>
- </div>
+        
+    </div>
+</nav>
 
-
-
-<div id="article-list" class="container main-container">
-    
-        <article class="simple-article">
+<article>
     <div class="card">
         <div class="card-content">
+            
+
             <div class="article-title">
                 
     
-        <h1 class="indigo-link-context"><a href="/2016/12/16/learningattitude/">学习态度</a></h1>
+        <h1>kotlin学习(2)</h1>
     
 
 
             </div>
+            <time class="pink-link-context" datetime="2017-06-27T06:56:40.000Z"><a href="/2017/06/27/kotlin学习-2/">2017-06-27</a></time>
 
-            <time class="pink-link-context" datetime="2016-12-16T06:43:15.000Z"><a href="/2016/12/16/learningattitude/">2016-12-16</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/learning/" class="chip pink lighten-1">learning</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>学习态度的培养方法</p>
-<p>学习态度是学习者对学习对象的一种心理倾向，包括认知、情感和行为三个因素。<br>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/12/16/learningattitude/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/12/01/ideatips/">IDEA Tips</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-12-01T07:43:43.000Z"><a href="/2016/12/01/ideatips/">2016-12-01</a></time>
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
 
             
     <div class="tags-row">
         
-            <a href="/tags/IDEA/" class="chip pink lighten-1">IDEA</a>
+            <a href="/tags/tech/" class="chip pink lighten-1">tech</a>
+        
+            <a href="/tags/kotlin/" class="chip pink lighten-1">kotlin</a>
+        
+            <a href="/tags/jvm/" class="chip pink lighten-1">jvm</a>
         
     </div>
 
 
-
-            
-                <div class="entry pink-link-context">
-                    <p>Intellij IDEA中有很多快捷键让人爱不释手，stackoverflow上也有一些有趣的讨论。每个人都有自己的最爱，想排出个理想的榜单还真是困难。以前也整理过Intellij的快捷键，这次就按照我日常开发时的使用频率，简单分类列一下我最喜欢的十大快捷-神-键吧。<br>1 智能提示</p>
-<p>Intellij首当其冲的当然就是Intelligence智能！基本的代码提示用Ctrl+Space，还有更智能地按类型信息提示Ctrl+Shift+Space，但因为Intellij总是随着我们敲击而自动提示，所以很多时候都不会手动敲这两个快捷键(除非提示框消失了)。用F2/ Shift+F2移动到有错误的代码，Alt+Enter快速修复(即Eclipse中的Quick Fix功能)。当智能提示为我们自动补全方法名时，我们通常要自己补上行尾的反括号和分号，当括号嵌套很多层时会很麻烦，这时我们只需敲Ctrl+Shift+Enter就能自动补全末尾的字符。而且不只是括号，例如敲完if/for时也可以自动补上{}花括号。<br>最后要说一点，Intellij能够智能感知spring、hibernate等主流框架的配置文件和类，以静制动，在看似“静态”的外表下，智能地扫描理解你的项目是如何构造和配置的。<br>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/12/01/ideatips/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
+            <div class="toc pink-link-context hide-on-med-and-down">
     
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/12/01/wechatrecord/">Wechat Record</a></h1>
-    
+</div>
 
 
-            </div>
-
-            <time class="pink-link-context" datetime="2016-12-01T04:53:39.000Z"><a href="/2016/12/01/wechatrecord/">2016-12-01</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/chatting/" class="chip pink lighten-1">chatting</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>微信聊天记录删除了怎么恢复<br>　　随着微信在网民中渐渐普及，无论在日常生活还是工作中，微信都扮演了重要的角色。许多日常交流信息也都靠微信传输，因此也难免有很多备忘信息在微信聊天记录中。那么微信聊天记录删除了怎么恢复呢?由于微信目前还没有像类似QQ的云端保存聊天记录功能，这需要我们事先定期对微信聊天记录进行备份才有希望对微信聊天记录恢复。备份后利用微信本身的导入导出功能，就可以将微信聊天记录还原了。</p>
-<p>情况一：安卓手机微信聊天记录删除了怎么恢复</p>
-<p>　　1、微信聊天记录删除了怎么恢复呢？现在给大家分享的是恢复语音的微信聊天记录，以及视频和图片。<br>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/12/01/wechatrecord/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/11/16/angular2/">Angular2</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-11-16T07:26:31.000Z"><a href="/2016/11/16/angular2/">2016-11-16</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/angular2/" class="chip pink lighten-1">angular2</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <ul>
-<li>Angular2<h2 id="环境准备："><a href="#环境准备：" class="headerlink" title="环境准备："></a>环境准备：</h2>安装 Node.js and npm<br>Prerequisite: Install Node.js and npm<br>如果你的机器上还没有 Node.js 和 npm ， 安装它们 。 我们的例子需要 node v5.x.x 或更高版本以及 npm 3.x.x 或更高版本。 要检查你正在使用的版本，请在终端窗口中运行 node -v 和 npm -v 命令。
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/11/16/angular2/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/11/16/wuyu/">吴语学习宝典</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-11-16T02:41:57.000Z"><a href="/2016/11/16/wuyu/">2016-11-16</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/吴语/" class="chip pink lighten-1">吴语</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <h2 id="声母"><a href="#声母" class="headerlink" title="声母"></a>声母</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">条目</th>
-<th style="text-align:center">清不送气塞音</th>
-<th style="text-align:center">清送气塞音</th>
-<th style="text-align:center">浊塞音</th>
-<th style="text-align:center">清擦音</th>
-<th style="text-align:center">浊擦音</th>
-<th style="text-align:center">阴次浊</th>
-<th style="text-align:center">次浊</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">唇音</td>
-<td style="text-align:center">p（怕）</td>
-<td style="text-align:center">ph（爸）</td>
-<td style="text-align:center">b（拔）</td>
-<td style="text-align:center">f（琺）</td>
-<td style="text-align:center">v（va，四声）</td>
-<td style="text-align:center">’m（骂-长音）</td>
-<td style="text-align:center">m（骂）</td>
-</tr>
-<tr>
-<td style="text-align:center">齿音</td>
-<td style="text-align:center">ts（砸a，四声）</td>
-<td style="text-align:center">tsh（擦a，四声）</td>
-<td style="text-align:center">dz（咋a，二声）</td>
-<td style="text-align:center">s（撒，四声）</td>
-<td style="text-align:center">z（zra，四声）</td>
-<td style="text-align:center">‘l（辣a，四声）</td>
-<td style="text-align:center">l（辣）</td>
-</tr>
-<tr>
-<td style="text-align:center">舌头音</td>
-<td style="text-align:center">t（大a，四声）</td>
-<td style="text-align:center">th（踏a，四声）</td>
-<td style="text-align:center">d(达a二声）</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">‘n(那a，四声）</td>
-<td style="text-align:center">n（那）</td>
-</tr>
-<tr>
-<td style="text-align:center">舌面音</td>
-<td style="text-align:center">c(cia炸a）</td>
-<td style="text-align:center">ch（chia差a）</td>
-<td style="text-align:center">j（jia驾a）</td>
-<td style="text-align:center">sh（shia霎a）</td>
-<td style="text-align:center">zh（ri啊）</td>
-<td style="text-align:center">’ny2(nia长音)</td>
-<td style="text-align:center">ny(nia)</td>
-</tr>
-<tr>
-<td style="text-align:center">牙音</td>
-<td style="text-align:center">k(尬a，四声）</td>
-<td style="text-align:center">kh（咔a，四声）</td>
-<td style="text-align:center">g（嘎a，二声）</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">‘ng(ng a，四声，长音）</td>
-<td style="text-align:center">ng（ng a）</td>
-</tr>
-<tr>
-<td style="text-align:center">卷舌音</td>
-<td style="text-align:center">c(ca炸a）</td>
-<td style="text-align:center">ch（cha差啊）</td>
-<td style="text-align:center">j（ja扎a）</td>
-<td style="text-align:center">sh（sha霎a）</td>
-<td style="text-align:center">zh（ri啊）</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-<tr>
-<td style="text-align:center">喉音</td>
-<td style="text-align:center">’（a啊，四声）</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">h(ha哈，四声）</td>
-<td style="text-align:center">gh（a啊，四声）</td>
-<td style="text-align:center">-</td>
-<td style="text-align:center">-</td>
-</tr>
-</tbody>
-</table>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/11/16/wuyu/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/11/16/shanghaihua/">上海话学习宝典</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-11-16T02:40:12.000Z"><a href="/2016/11/16/shanghaihua/">2016-11-16</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/上海话/" class="chip pink lighten-1">上海话</a>
-        
-            <a href="/tags/吴语/" class="chip pink lighten-1">吴语</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <h2 id="上海话声调"><a href="#上海话声调" class="headerlink" title="上海话声调"></a>上海话声调</h2><table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:center"></th>
-<th style="text-align:center">上海话声调及调值</th>
-<th style="text-align:center">（下划线表示入声，读时短促）</th>
-<th style="text-align:center"></th>
-<th style="text-align:center"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">调名</td>
-<td style="text-align:center">一声</td>
-<td style="text-align:center">二声</td>
-<td style="text-align:center">三声</td>
-<td style="text-align:center">四声</td>
-<td style="text-align:center">五声</td>
-</tr>
-<tr>
-<td style="text-align:center">调类</td>
-<td style="text-align:center">阴平</td>
-<td style="text-align:center">阴去</td>
-<td style="text-align:center">阳去</td>
-<td style="text-align:center">阴入</td>
-<td style="text-align:center">阳入</td>
-</tr>
-<tr>
-<td style="text-align:center">五度标音</td>
-<td style="text-align:center">51</td>
-<td style="text-align:center">445</td>
-<td style="text-align:center">113</td>
-<td style="text-align:center"><u>44</u></td>
-<td style="text-align:center"><u>23</u></td>
-</tr>
-</tbody>
-</table>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/11/16/shanghaihua/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/11/15/regularexpression/">Regular Expression</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-11-15T02:12:28.000Z"><a href="/2016/11/15/regularexpression/">2016-11-15</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/Reg/" class="chip pink lighten-1">Reg</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <ul>
-<li><span style="font-size:30px;margin:0 40%;">语法</span><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2>  正则表达式(regular expression)描述了一种字符串匹配的模式，可以用来检查一个串是否含有某种子串、将匹配的子串做替换或者从某个串中取出符合某个条件的子串等。<ul>
-<li>列目录时，　dir <em>.txt或ls </em>.txt中的<em>.txt就不是一个正则表达式,因为这里</em>与正则式的*的含义是不同的。</li>
-<li>构造正则表达式的方法和创建数学表达式的方法一样。也就是用多种元字符与运算符可以将小的表达式结合在一起来创建更大的表达式。正则表达式的组件可以是单个的字符、字符集合、字符范围、字符间的选择或者所有这些组件的任意组合。<br>正则表达式是由普通字符（例如字符 a 到 z）以及特殊字符（称为”元字符”）组成的文字模式。模式描述在搜索文本时要匹配的一个或多个字符串。正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/11/15/regularexpression/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/11/07/gonewithwind/">Gone With The Wind</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-11-07T10:46:43.000Z"><a href="/2016/11/07/gonewithwind/">2016-11-07</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/love/" class="chip pink lighten-1">love</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <p>RHETT: Let’s see, my losses for the afternoon come to what? Hmm…  three hundred and fourty. My debts do mount up, don’t they, Major? MAJOR: All right, Corporal. Show Captain Butler’s sister to his cell. RHETT: Thank you, Major…excuse me, gentlemen.<br>MAJOR: It’s hard to be strict with a man who loses money so  pleasantly.<br>(In the jail. Scarlett appears, dressing in beautiful green velvet.) SCARLETT: Rhett!<br>RHETT: Scarlett! My dear little sister. (to Corporal) It’s all right  Corporal, my sister has brought me now files or saws. Can I really  kiss you now?<br>SCARLETT: On the forehead like a good brother.<br>
-                </div>
-            
-        </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/11/07/gonewithwind/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
-                
-    
-        <h1 class="indigo-link-context"><a href="/2016/11/01/schoollightning/">schoollightning</a></h1>
-    
-
-
-            </div>
-
-            <time class="pink-link-context" datetime="2016-11-01T09:15:22.000Z"><a href="/2016/11/01/schoollightning/">2016-11-01</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/math/" class="chip pink lighten-1">math</a>
-        
-            <a href="/tags/lightning/" class="chip pink lighten-1">lightning</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <h1 id="离奇的闪电"><a href="#离奇的闪电" class="headerlink" title="离奇的闪电"></a>离奇的闪电</h1><ul>
-<li>是大物的迷茫还是高数的沦丧？</li>
-<li>上海某高校放假太晚遭雷劈</li>
+            <div class="entry pink-link-context">
+                <p>习惯用法</p>
+<p>创建 DTOs（POJOs/POCOs）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">data class Customer(val name: String, val email: String)</div></pre></td></tr></table></figure></p>
+<p>会为 Customer 类提供以下功能：</p>
+<ul>
+<li>所有属性的 getters （对于 var 定义的还有 setters）</li>
+<li>equals()</li>
+<li>hashCode()</li>
+<li>toString()</li>
+<li>copy()</li>
+<li>所有属性的 component1()、 component2()……等等<a id="more"></a>
+</li>
 </ul>
-<iframe src="http://of8ab6qqu.bkt.clouddn.com/videos/schoollightning.mp4" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
-                </div>
-            
-        </div>
+<p>函数的默认参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fun foo(a: Int = 0, b: String = &quot;&quot;) &#123; …… &#125;</div></pre></td></tr></table></figure></p>
+<p>过滤 list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val positives = list.filter &#123; x -&gt; x &gt; 0 &#125;</div><div class="line">或</div><div class="line">val positives = list.filter &#123; it &gt; 0 &#125;</div></pre></td></tr></table></figure></p>
+<p>String 内插<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">println(&quot;Name $name&quot;)</div></pre></td></tr></table></figure></p>
+<p>类型判断<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">when (x) &#123;</div><div class="line">    is Foo //-&gt; ……</div><div class="line">    is Bar //-&gt; ……</div><div class="line">    else   //-&gt; ……</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>遍历 map/pair型list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for ((k, v) in map) &#123;</div><div class="line">    println(&quot;$k -&gt; $v&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>k、v 可以改成任意名字。</p>
+<p>使用区间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">for (i in 1..100) &#123; …… &#125;  // 闭区间：包含 100</div><div class="line">for (i in 1 until 100) &#123; …… &#125; // 半开区间：不包含 100</div><div class="line">for (x in 2..10 step 2) &#123; …… &#125;</div><div class="line">for (x in 10 downTo 1) &#123; …… &#125;</div><div class="line">if (x in 1..10) &#123; …… &#125;</div></pre></td></tr></table></figure></p>
+<p>只读 list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">val list = listOf(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</div></pre></td></tr></table></figure></p>
+<p>只读 map<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">val map = mapOf(&quot;a&quot; to 1, &quot;b&quot; to 2, &quot;c&quot; to 3)</div></pre></td></tr></table></figure></p>
+<p>访问 map<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">println(map[&quot;key&quot;])</div><div class="line">map[&quot;key&quot;] = value</div></pre></td></tr></table></figure></p>
+<p>延迟属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val p: String by lazy &#123;</div><div class="line">    // 计算该字符串</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>扩展函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fun String.spaceToCamelCase() &#123; …… &#125;</div><div class="line"></div><div class="line">&quot;Convert this to camelcase&quot;.spaceToCamelCase()</div></pre></td></tr></table></figure></p>
+<p>创建单例<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">object Resource &#123;</div><div class="line">    val name = &quot;Name&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>If not null 缩写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val files = File(&quot;Test&quot;).listFiles()</div><div class="line"></div><div class="line">println(files?.size)</div></pre></td></tr></table></figure></p>
+<p>If not null and else 缩写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val files = File(&quot;Test&quot;).listFiles()</div><div class="line"></div><div class="line">println(files?.size ?: &quot;empty&quot;)</div></pre></td></tr></table></figure></p>
+<p>if null 执行一个语句<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">val data = ……</div><div class="line">val email = data[&quot;email&quot;] ?: throw IllegalStateException(&quot;Email is missing!&quot;)</div></pre></td></tr></table></figure></p>
+<p>if not null 执行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">val data = ……</div><div class="line"></div><div class="line">data?.let &#123;</div><div class="line">    …… // 代码会执行到此处, 假如data不为null</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>映射可空值（如果非空的话）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">val data = ……</div><div class="line"></div><div class="line">val mapped = data?.let &#123; transformData(it) &#125; ?: defaultValueIfDataIsNull</div></pre></td></tr></table></figure></p>
+<p>返回 when 表达式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fun transform(color: String): Int &#123;</div><div class="line">    return when (color) &#123;</div><div class="line">        &quot;Red&quot; -&gt; 0</div><div class="line">        &quot;Green&quot; -&gt; 1</div><div class="line">        &quot;Blue&quot; -&gt; 2</div><div class="line">        else -&gt; throw IllegalArgumentException(&quot;Invalid color param value&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>“try/catch”表达式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">fun test() &#123;</div><div class="line">    val result = try &#123;</div><div class="line">        count()</div><div class="line">    &#125; catch (e: ArithmeticException) &#123;</div><div class="line">        throw IllegalStateException(e)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    // 使用 result</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>“if”表达式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">fun foo(param: Int) &#123;</div><div class="line">    val result = if (param == 1) &#123;</div><div class="line">        &quot;one&quot;</div><div class="line">    &#125; else if (param == 2) &#123;</div><div class="line">        &quot;two&quot;</div><div class="line">    &#125; else &#123;</div><div class="line">        &quot;three&quot;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>返回类型为 Unit 的方法的 Builder 风格用法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">fun arrayOfMinusOnes(size: Int): IntArray &#123;</div><div class="line">    return IntArray(size).apply &#123; fill(-1) &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>单表达式函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">fun theAnswer() = 42</div><div class="line">或</div><div class="line">fun theAnswer(): Int &#123;</div><div class="line">    return 42</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>单表达式函数与其它惯用法一起使用能简化代码，例如和 when 表达式一起使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">fun transform(color: String): Int = when (color) &#123;</div><div class="line">    &quot;Red&quot; -&gt; 0</div><div class="line">    &quot;Green&quot; -&gt; 1</div><div class="line">    &quot;Blue&quot; -&gt; 2</div><div class="line">    else -&gt; throw IllegalArgumentException(&quot;Invalid color param value&quot;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对一个对象实例调用多个方法 （with）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class Turtle &#123;</div><div class="line">    fun penDown()</div><div class="line">    fun penUp()</div><div class="line">    fun turn(degrees: Double)</div><div class="line">    fun forward(pixels: Double)</div><div class="line">&#125;</div><div class="line"></div><div class="line">val myTurtle = Turtle()</div><div class="line">with(myTurtle) &#123; // 画一个 100 像素的正方形</div><div class="line">    penDown()</div><div class="line">    for(i in 1..4) &#123;</div><div class="line">        forward(100.0)</div><div class="line">        turn(90.0)</div><div class="line">    &#125;</div><div class="line">    penUp()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Java 7 的 try with resources<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">val stream = Files.newInputStream(Paths.get(&quot;/some/file.txt&quot;))</div><div class="line">stream.buffered().reader().use &#123; reader -&gt;</div><div class="line">    println(reader.readText())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>对于需要泛型信息的泛型函数的适宜形式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//  public final class Gson &#123;</div><div class="line">//     ……</div><div class="line">//     public &lt;T&gt; T fromJson(JsonElement json, Class&lt;T&gt; classOfT) throws JsonSyntaxException &#123;</div><div class="line">//     ……</div><div class="line"></div><div class="line">inline fun &lt;reified T: Any&gt; Gson.fromJson(json): T = this.fromJson(json, T::class.java)</div></pre></td></tr></table></figure></p>
+<p>使用可空布尔<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">val b: Boolean? = ……</div><div class="line">if (b == true) &#123;</div><div class="line">    ……</div><div class="line">&#125; else &#123;</div><div class="line">    // `b` 是 false 或者 null</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/11/01/schoollightning/">阅读全文</a>
-        </ div>
-        
-    </div>
-</article>
-
-    
-        <article class="simple-article">
-    <div class="card">
-        <div class="card-content">
-            <div class="article-title">
                 
-    
-        <h1 class="indigo-link-context"><a href="/2016/10/25/configureeclipse/">Configure memory of eclipse</a></h1>
-    
+
+
+<p class="pink-link-context">
+    <a href="/2017/06/27/kotlin学习-1/" rel="next" title="kotlin学习(1)">
+    下一篇：kotlin学习(1)
+  </a>
+</p>
 
 
             </div>
-
-            <time class="pink-link-context" datetime="2016-10-25T10:19:31.000Z"><a href="/2016/10/25/configureeclipse/">2016-10-25</a></time>
-
-            
-    <div class="tags-row">
-        
-            <a href="/tags/eclipse/" class="chip pink lighten-1">eclipse</a>
-        
-    </div>
-
-
-
-            
-                <div class="entry pink-link-context">
-                    <h1 id="配置eclipse-ini："><a href="#配置eclipse-ini：" class="headerlink" title="配置eclipse.ini："></a>配置eclipse.ini：</h1><p>-startup<br>plugins/org.eclipse.equinox.launcher_1.3.100.v20150511-1540.jar<br>–launcher.library<br>plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.1.300.v20150602-1417<br>-product<br>org.eclipse.epp.package.jee.product<br>–launcher.defaultAction<br>
-                </div>
-            
+			
         </div>
-
-        
-        <div class="card-action pink-link-context">
-            <a href="/2016/10/25/configureeclipse/">阅读全文</a>
-        </ div>
-        
     </div>
 </article>
 
-    
 
-    <ul class="pagination center-align">
-    <li class="">
-        <a href="/"><i class="fa fa-angle-left"></i></a>
-    </li>
-    
-    
-        <li class="waves-effect"><a href="/">1</a></li>
-    
-        <li class="active pink"><a href="/page/2">2</a></li>
-    
-        <li class="waves-effect"><a href="/page/3">3</a></li>
-    
-        <li class="waves-effect"><a href="/page/4">4</a></li>
-    
-    
-    <li class="">
-        <a href="/page/3/"><i class="fa fa-angle-right"></i></a>
-    </li>
- </ul>
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2017/06/27/kotlin学习-2/" data-title="kotlin学习(2)" data-url="http://yizi.tech/2017/06/27/kotlin学习-2/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'lonlone'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
+
 
 </div>
 
